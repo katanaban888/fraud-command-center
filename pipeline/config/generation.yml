@@ -1,0 +1,11 @@
+# Reproducible synthetic dataset configuration.
+seed: 42
+start_date: "2025-01-01T00:00:00+00:00"
+days: 120
+counts:
+  customers: 5000
+  accounts: 6000
+  devices: 3000
+  beneficiaries: 10000
+  transactions: 50000
+fraud_rate_target: 0.02
