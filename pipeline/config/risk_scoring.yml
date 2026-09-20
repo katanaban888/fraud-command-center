@@ -1,0 +1,19 @@
+# Weights are transparent and sum to one. Values can be tuned without changing code.
+weights:
+  rule_score: 0.45
+  behavioral_score: 0.20
+  customer_score: 0.10
+  device_score: 0.10
+  network_score: 0.10
+  geo_channel_score: 0.05
+risk_levels:
+  low: 29
+  medium: 59
+  high: 79
+  critical: 100
+customer_scores:
+  Low: 10
+  Medium: 45
+  High: 80
+analyst_minutes_per_alert: 8
+prevention_rate_assumption: 0.70

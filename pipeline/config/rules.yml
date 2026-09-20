@@ -1,0 +1,110 @@
+version: V2
+rules:
+  - rule_id: R001
+    rule_name: Night Transaction
+    description: Transaction occurs between 01:00 and 05:00.
+    category: Time Pattern
+    score: 12
+    severity: Medium
+    enabled: true
+    threshold_v1: true
+    threshold_v2: true
+  - rule_id: R002
+    rule_name: New Device
+    description: Customer has not used this device earlier in the transaction history.
+    category: Device
+    score: 16
+    severity: High
+    enabled: true
+    threshold_v1: true
+    threshold_v2: true
+  - rule_id: R003
+    rule_name: New Beneficiary
+    description: Customer has not previously used this beneficiary.
+    category: Beneficiary
+    score: 14
+    severity: High
+    enabled: true
+    threshold_v1: true
+    threshold_v2: true
+  - rule_id: R004
+    rule_name: Unusual Amount
+    description: Amount is materially above the customer's prior baseline.
+    category: Behavior
+    score: 18
+    severity: High
+    enabled: true
+    threshold_v1: 2.0
+    threshold_v2: 3.0
+  - rule_id: R005
+    rule_name: High Velocity
+    description: Customer makes too many transactions in a short period.
+    category: Velocity
+    score: 17
+    severity: High
+    enabled: true
+    threshold_v1: 4
+    threshold_v2: 6
+  - rule_id: R006
+    rule_name: Balance Depletion
+    description: Transaction consumes a large share of available balance.
+    category: Balance
+    score: 18
+    severity: Critical
+    enabled: true
+    threshold_v1: 0.80
+    threshold_v2: 0.90
+  - rule_id: R007
+    rule_name: Geographic Deviation
+    description: Event differs from the customer's usual geography or is high risk.
+    category: Geography
+    score: 15
+    severity: High
+    enabled: true
+    threshold_v1: true
+    threshold_v2: true
+  - rule_id: R008
+    rule_name: Shared Device
+    description: Device is associated with multiple customers.
+    category: Network
+    score: 15
+    severity: High
+    enabled: true
+    threshold_v1: 2
+    threshold_v2: 3
+  - rule_id: R009
+    rule_name: Beneficiary Concentration
+    description: Many distinct senders have transferred to the same beneficiary.
+    category: Network
+    score: 13
+    severity: Medium
+    enabled: true
+    threshold_v1: 5
+    threshold_v2: 8
+  - rule_id: R010
+    rule_name: High-Risk Customer
+    description: Event belongs to a customer with a high profile risk level.
+    category: Customer Profile
+    score: 11
+    severity: Medium
+    enabled: true
+    threshold_v1: true
+    threshold_v2: true
+  - rule_id: R011
+    rule_name: Structuring Pattern
+    description: Multiple near-threshold transfers occur in a short period.
+    category: Structuring
+    score: 16
+    severity: High
+    enabled: true
+    threshold_v1: 3
+    threshold_v2: 4
+  - rule_id: R012
+    rule_name: Circular Flow
+    description: Transaction resembles a repeated flow through connected entities.
+    category: Network
+    score: 20
+    severity: Critical
+    enabled: true
+    threshold_v1: true
+    threshold_v2: true

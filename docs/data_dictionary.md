@@ -45,6 +45,26 @@ Fraud Command Center uses a synthetic dataset generated locally with a fixed ran
 - `fraud_scenario`: scenario label used to evaluate coverage. Normal behavior is labeled `normal`.
 - `data_source`: `synthetic_generator`.
 
+## `transaction_features`
+
+The feature table has one row per transaction and includes time, novelty, behavior, geography, velocity and network signals. Important groups include:
+
+- `transaction_hour`, `day_of_week`, `is_night`, `is_weekend`;
+- `amount_log`, `amount_percentile`, `amount_vs_customer_average`, `amount_z_score`;
+- `is_new_beneficiary`, `is_new_device`, `is_new_country`, `is_high_risk_country`, `is_high_risk_channel`;
+- `balance_depletion_ratio`;
+- `customer_avg_transaction_amount`, `customer_median_transaction_amount`, `customer_std_transaction_amount`;
+- `transactions_last_10_minutes`, `transactions_last_1_hour`, `transactions_last_24_hours`;
+- `unique_beneficiaries_last_24_hours`, `unique_devices_last_30_days`;
+- `customer_transaction_frequency`, `customer_days_since_registration`;
+- `deviation_from_usual_city`, `deviation_from_usual_country`;
+- `number_of_customers_per_device`, `number_of_accounts_per_device`;
+- `number_of_senders_to_beneficiary`, `number_of_beneficiaries_from_sender`;
+- `shared_device_risk`, `beneficiary_network_risk`, `circular_transfer_indicator`, `connected_account_count`;
+- `customer_segment`.
+
+The feature engineering module updates its state only after calculating the current row. This is the central leakage-control rule of the project.
+
 ## Fraud label policy
 
 The generator includes normal behaviors such as salary credits, utility payments, purchases, subscriptions, travel and business payments. A small minority of rows receive one of the labeled fraud scenarios:

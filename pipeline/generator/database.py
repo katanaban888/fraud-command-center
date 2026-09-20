@@ -21,6 +21,16 @@ TABLE_ORDER = [
     "device_customer_links",
     "beneficiaries",
     "transactions",
+    "transaction_features",
+    "rule_definitions",
+    "rule_results",
+    "alerts",
+    "alert_score_components",
+    "analysts",
+    "cases",
+    "model_metrics",
+    "data_quality_results",
+    "business_insights",
 ]
 
 
