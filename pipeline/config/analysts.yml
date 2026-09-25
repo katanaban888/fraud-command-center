@@ -1,0 +1,25 @@
+analysts:
+  - analyst_id: ANL001
+    display_name: Jordan Lee
+    team: Fraud Operations
+    is_active: true
+  - analyst_id: ANL002
+    display_name: Priya Shah
+    team: Fraud Operations
+    is_active: true
+  - analyst_id: ANL003
+    display_name: Mateo Silva
+    team: Risk Intelligence
+    is_active: true
+  - analyst_id: ANL004
+    display_name: Amina Rahman
+    team: Risk Intelligence
+    is_active: true
+  - analyst_id: ANL005
+    display_name: Alex Chen
+    team: Escalations
+    is_active: true
+  - analyst_id: ANL006
+    display_name: Sam Taylor
+    team: Escalations
+    is_active: true
